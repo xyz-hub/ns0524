@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7 Wonders</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="fade-in">
+    <div class="floating-bg"></div> <!-- Background Music --> <audio id="bgMusic" loop>
+        <source src="music/background.mp3" type="audio/mp3">
+    </audio>
+    <div class="container">
+        <div class="glass-card">
+            <h1 class="main-title"> Do you know there are <span>7 wonders</span> in the world ? </h1>
+            <p class="subtitle"> Think carefully before answering 🪻 </p>
+            <div class="button-group"> <button class="cute-btn" onclick="startWebsite('yes')"> Yes ✨ </button> <button
+                    class="cute-btn" onclick="startWebsite('no')"> No 🌸 </button> </div>
+        </div>
+    </div>
+    <footer class="footer"> Made for Laado with ❤️ </footer>
+    <script> const bgMusic = document.getElementById("bgMusic"); function startWebsite(answer) { bgMusic.play(); document.body.classList.add("fade-out"); setTimeout(() => { window.location.href = `wonders.html?answer=${answer}`; }, 700); } </script>
+</body>
+
+</html>
