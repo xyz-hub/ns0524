@@ -5,84 +5,163 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>7 Wonders</title>
+
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body class="fade-in">
-  <div class="floating-bg"></div> <!-- Background Music --> <audio id="bgMusic" autoplay loop>
+
+  <div class="floating-bg"></div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
     <source src="music/background.mp3" type="audio/mp3">
-  </audio> <!-- Voice Track --> <audio id="voiceTrack">
+  </audio>
+
+  <!-- Voice Track -->
+  <audio id="voiceTrack">
     <source src="music/voice.mp3" type="audio/mp3">
   </audio>
+
   <div class="container">
+
     <h1 id="headline" class="headline"></h1>
-    <div class="cards-container"> <!-- CARD 1 -->
+
+    <div class="cards-container">
+
+      <!-- CARD 1 -->
       <div class="flip-card" onclick="flipCard(this,event)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <h2>Her Smile ❤️</h2>
           </div>
-          <div class="flip-card-back"> <img src="images/smile.jpeg"> </div>
+          <div class="flip-card-back">
+            <img src="images/smile.jpeg" alt="Smile">
+          </div>
         </div>
-      </div> <!-- CARD 2 -->
+      </div>
+
+      <!-- CARD 2 -->
       <div class="flip-card" onclick="flipCard(this,event)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <h2>Her Simplicity 💙</h2>
           </div>
-          <div class="flip-card-back"> <img src="images/simplicity.jpeg"> </div>
+          <div class="flip-card-back">
+            <img src="images/simplicity.jpeg" alt="Simplicity">
+          </div>
         </div>
-      </div> <!-- CARD 3 -->
+      </div>
+
+      <!-- CARD 3 -->
       <div class="flip-card" onclick="flipCard(this,event)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <h2>Her Eyes 💜</h2>
           </div>
-          <div class="flip-card-back"> <img src="images/eyes.jpeg"> </div>
+          <div class="flip-card-back">
+            <img src="images/eyes.jpeg" alt="Eyes">
+          </div>
         </div>
-      </div> <!-- CARD 4 -->
+      </div>
+
+      <!-- CARD 4 -->
       <div class="flip-card" onclick="flipCard(this,event)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <h2>Her Cuteness 💚</h2>
           </div>
-          <div class="flip-card-back"> <img src="images/cuteness.jpeg"> </div>
+          <div class="flip-card-back">
+            <img src="images/cuteness.jpeg" alt="Cuteness">
+          </div>
         </div>
-      </div> <!-- CARD 5 -->
+      </div>
+
+      <!-- CARD 5 -->
       <div class="flip-card" onclick="flipCard(this,event)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <h2>Her Nails 🧡</h2>
           </div>
-          <div class="flip-card-back"> <img src="images/nails.jpeg"> </div>
+          <div class="flip-card-back">
+            <img src="images/nails.jpeg" alt="Nails">
+          </div>
         </div>
-      </div> <!-- CARD 6 -->
+      </div>
+
+      <!-- CARD 6 : VOICE CARD -->
       <div class="flip-card" onclick="voiceWonder(this,event)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <h2>Her Voice 🤍</h2>
           </div>
-          <div class="flip-card-back"> <img src="images/voice.jpeg"> </div>
+          <div class="flip-card-back">
+            <img src="images/voice.jpeg" alt="Voice">
+          </div>
         </div>
-      </div> <!-- CARD 7 -->
+      </div>
+
+      <!-- CARD 7 -->
       <div class="flip-card" onclick="flipCard(this,event)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <h2>Her Goofiness 🩷</h2>
           </div>
-          <div class="flip-card-back"> <img src="images/goofiness.jpeg"> </div>
+          <div class="flip-card-back">
+            <img src="images/goofiness.jpeg" alt="Goofiness">
+          </div>
         </div>
       </div>
-    </div> <!-- Special Section -->
-    <div class="special-section">
-      <h2 class="special-title"> Do You Know There Is An 8th Wonder Also? ✨ </h2>
-      <div class="button-group"> <button class="cute-btn" onclick="goFinal()"> Yes 🌸 </button> <button class="cute-btn"
-          onclick="goFinal()"> No ☁️ </button> </div>
+
     </div>
+
+    <!-- Special Section -->
+
+    <div class="special-section">
+
+      <h2 class="special-title">
+        Do You Know There Is An 8th Wonder Also? ✨
+      </h2>
+
+      <div class="button-group">
+
+        <button class="cute-btn" onclick="goFinal()">
+          Yes 🌸
+        </button>
+
+        <button class="cute-btn" onclick="goFinal()">
+          No ☁️
+        </button>
+
+      </div>
+
+    </div>
+
   </div>
-  <footer class="footer"> Made for Laado with ❤️ </footer>
+
+  <footer class="footer">
+    Made for Laado with ❤️
+  </footer>
+
   <script src="script.js"></script>
+
+  <!-- Start music after page loads -->
+  <script>
+    window.addEventListener("load", () => {
+
+      const music = document.getElementById("bgMusic");
+
+      if (music) {
+        music.play().catch(() => {});
+      }
+
+    });
+  </script>
+
 </body>
 
 </html>
+
